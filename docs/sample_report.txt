@@ -1,0 +1,150 @@
+SECURECHECKS SA - SECURITY ASSESSMENT REPORT
+=================================================================
+
+# SECURECHECKS SA - SECURITY ASSESSMENT REPORT
+**Business:** Eco Fest | **Date:** 28 October 2026 | **Score:** 21/100 - CRITICAL RISK
+
+## Executive Summary
+
+Eco Fest scored 21 out of 100, which places it in the critical risk category. The assessment found 15 of 20 security controls missing, including 5 critical gaps and 9 high-risk gaps. For an event business, this matters a great deal. Event organisers collect ticket buyers' names, contact details and payment information, and often hold vendor, volunteer and sponsor records as well. Right now, there is no reliable protection on the accounts that hold this information. Staff may share passwords, accounts are not protected by a second login step, and there is no clear plan for what to do if the data is stolen or locked.
+
+The risk is serious and needs action now, not later. A single phishing email could give an attacker access to your email and files, and they could then send fake payment requests to your ticket buyers. Losing a laptop or USB drive at a festival site could also count as a reportable data breach under South African law. The good news is that most of the critical fixes are free or low-cost and can be done in a few days. Starting with the steps in the 30-day plan at the end of this report will reduce your risk substantially.
+
+## What You Are Doing Well
+
+The assessment recorded 5 of 20 controls as passed. The database record for this report does not list which five controls passed, so we cannot name them here without guessing. Please ask SecureCheck SA for the full assessment record to see which controls are already in place. Those are worth keeping and building on.
+
+## CRITICAL - Fix These This Week
+
+**1. Multi-Factor Authentication (MFA) is not enabled on all staff accounts**
+*POPIA Section 19 (security safeguards)*
+- **What could happen:** If a password is stolen, for example through a fake login page, an attacker can log straight into your email or booking systems. They could then message ticket buyers from your address or change payment details.
+- **Fix:** Turn on MFA for every account using Microsoft Authenticator (free). Each login then requires a code from the person's phone as well as the password.
+- **Time estimate:** About 10 minutes per user. Allow about 1 hour for a team of 5 to 6 people.
+- **Cost:** Free.
+
+**2. Staff share logins and passwords**
+*POPIA Section 19 (security safeguards)*
+- **What could happen:** When everyone uses the same login, you cannot tell who accessed or changed customer data. If a staff member leaves, you cannot remove their access without changing the password for everyone.
+- **Fix:** Create a separate account for each person. Use Bitwarden (free) to store and share passwords securely, so nobody needs to write them on paper or in chat messages.
+- **Time estimate:** Half a day to set up accounts and Bitwarden, plus a short team briefing.
+- **Cost:** Free for the basic Bitwarden plan.
+
+**3. Client data is stored on unencrypted drives or USB sticks**
+*POPIA Section 19 (security safeguards)*
+- **What could happen:** A USB drive with ticket buyer lists left behind after an event, or a stolen laptop, could expose thousands of people's personal details. Under POPIA, this is a reportable breach.
+- **Fix:** Move all client files to Microsoft OneDrive or Azure Blob Storage, which encrypt data automatically. Stop saving client data to USB drives.
+- **Time estimate:** 1 to 2 days to move files and check that old copies are deleted.
+- **Cost:** OneDrive is often included in a Microsoft 365 subscription. Check your current plan first. Azure Blob Storage is pay-as-you-go and usually costs very little for a small business.
+
+**4. No Information Officer has been appointed**
+*POPIA Section 55 (Information Officer duties)*
+- **What could happen:** Without an Information Officer, no one is legally responsible for protecting personal information. This is a breach of the law in itself, and it leaves no one to deal with a data incident or a request from a customer.
+- **Fix:** Appoint an Information Officer (for a business, this is usually the head of the business, which may be you) and register them with the Information Regulator at inforegulator.org.za. This is a legal requirement.
+- **Time estimate:** 1 to 2 hours.
+- **Cost:** Free to register.
+
+**5. No documented breach response plan**
+*POPIA Section 22 (notification of security compromises)*
+- **What could happen:** If customer data is stolen, you may not know who to call, what to say, or how to stop the damage. Delays can make the harm worse and the legal consequences more serious.
+- **Fix:** Write a simple one-page breach response plan. It should cover who to call, how to contain the problem, and how to notify the Information Regulator and affected people as soon as reasonably possible after a breach, as POPIA requires.
+- **Time estimate:** About 2 to 3 hours.
+- **Cost:** Free. A template can be written in-house.
+
+## HIGH PRIORITY - Fix Within 30 Days
+
+**1. Access is not reviewed every 6 months**
+*POPIA Section 19 (security safeguards)*
+- **What could happen:** Former volunteers, contractors or staff may still have access to customer lists and payment systems months after they have left.
+- **Fix:** Remove access for anyone who has left or changed roles. Give each person only the access they need for their job.
+- **Time estimate:** 1 to 2 hours now, then a 30-minute review every 6 months.
+- **Cost:** Free.
+
+**2. Automated backups are not running daily**
+*POPIA Section 19 (security safeguards)*
+- **What could happen:** If ransomware locks your files or a device fails, you could lose ticket sales records, vendor contracts and customer data permanently, just before or during an event.
+- **Fix:** Turn on Microsoft 365 backup or Azure Backup. Test restoring a file every month to confirm the backup works.
+- **Time estimate:** 2 to 3 hours to set up, plus 15 minutes a month for testing.
+- **Cost:** Varies. Check whether your Microsoft 365 plan includes backup. Azure Backup is pay-as-you-go.
+
+**3. You do not know exactly where all client data is stored**
+*POPIA Section 14 (minimality and retention)*
+- **What could happen:** If you do not know where data is, you cannot protect it, delete it, or tell the Information Regulator what was affected in a breach. Ticket lists can end up in old email attachments, personal phones and forgotten folders.
+- **Fix:** Create a data inventory listing every system, folder and device holding client data, including personal phones, email accounts and event-day tablets.
+- **Time estimate:** 1 day.
+- **Cost:** Free.
+
+**4. Computers and devices are not kept up to date**
+*POPIA Section 19 (security safeguards)*
+- **What could happen:** Attackers exploit known weaknesses in old software. Outdated laptops and phones are among the easiest targets.
+- **Fix:** Turn on automatic updates on all Windows PCs and mobile devices.
+- **Time estimate:** About 30 minutes per device.
+- **Cost:** Free.
+
+**5. Lost or stolen laptops cannot be wiped remotely**
+*POPIA Section 19 (security safeguards)*
+- **What could happen:** A laptop stolen from a vehicle or event site could contain customer lists and vendor contracts that anyone can open.
+- **Fix:** Turn on Find My Device (free on Windows) for each laptop now. For more control across all devices, consider Microsoft Intune.
+- **Time estimate:** About 20 minutes per laptop.
+- **Cost:** Find My Device is free. Intune requires a Microsoft 365 business plan that includes it.
+
+**6. Staff have not been trained to spot phishing emails in the last 12 months**
+*POPIA Section 19 (security safeguards)*
+- **What could happen:** Phishing is the most common way South African small businesses are attacked. A fake email from a "bank" or "supplier" can lead to a stolen password or a payment fraud.
+- **Fix:** Run a phishing awareness session for all staff. Free training resources are available at knowbe4.com.
+- **Time estimate:** 1 to 2 hours for the team, plus a short refresher every year.
+- **Cost:** Free resources available.
+
+**7. No clear policy for how staff must handle client data**
+*POPIA Section 18 (notification to the data subject)*
+- **What could happen:** Without rules, staff may send ticket lists to personal email accounts or store them on personal phones, which increases the risk of a leak.
+- **Fix:** Write a one-page data handling policy. State clearly that client data must not be sent to personal emails or stored on personal drives.
+- **Time estimate:** 2 to 3 hours to write, then a team briefing.
+- **Cost:** Free.
+
+**8. No process to delete client data that is no longer needed**
+*POPIA Section 14 (minimality and retention)*
+- **What could happen:** Old ticket lists from past festivals stay on file indefinitely. The more data you hold, the more damage a breach can cause, and POPIA does not allow you to keep personal information longer than necessary.
+- **Fix:** Create a data retention policy. Set how long you keep each type of data, then delete or anonymise anything no longer required.
+- **Time estimate:** 1 day to set up, then a yearly clean-up.
+- **Cost:** Free.
+
+**9. Ransomware response has never been tested**
+*POPIA Section 19 (security safeguards)*
+- **What could happen:** If ransomware locks your files the week before a festival, you may not know who to call, which backups to restore or what to tell your vendors and ticket holders.
+- **Fix:** Run a tabletop exercise. Ask the question: "If our files were locked today, what would we do?" Write down the gaps you find and fix them.
+- **Time estimate:** 1 to 2 hours with your team.
+- **Cost:** Free.
+
+## RECOMMENDED IMPROVEMENTS
+
+**IT support contact or procedure is missing (MEDIUM RISK)**
+*POPIA Section 19 (security safeguards)*
+- **Why it matters:** When something goes wrong during an event, you need someone to call straight away.
+- **Fix:** Identify an IT support provider before an incident happens. Save their number somewhere everyone can find it.
+- **Time estimate:** 1 hour.
+- **Cost:** Varies. Ask for a quote from a local provider.
+
+## Your POPIA Compliance Status
+
+The Protection of Personal Information Act (POPIA) applies to every South African business that handles personal information, including event organisers who collect ticket buyers' details. This assessment found gaps against several POPIA requirements. Section 19 requires you to secure personal information against loss and unauthorised access, and most of the failed controls fall under it. Section 14 requires you to keep personal information only as long as needed and to know where it is held. Section 18 requires you to be open with people about how their information is used, and your staff need clear rules to support that. Section 22 requires you to notify the Information Regulator and affected people as soon as reasonably possible after a breach, which is why a breach response plan matters. Section 55 requires you to appoint an Information Officer, and this is currently missing.
+
+Non-compliance can be serious. Penalties under POPIA can reach R10 million, and certain offences can lead to imprisonment for up to 10 years. The regulator responsible for enforcing POPIA is the **Information Regulator of South Africa**. You can find guidance, registration forms and contact details at **inforegulator.org.za**. Visit the site to register your Information Officer and read the official guidance for your business.
+
+*This report is guidance, not legal advice. For a full legal review of your POPIA obligations, speak to a qualified attorney.*
+
+## Your 30-Day Action Plan
+
+1. **Turn on MFA and set up individual logins (FREE).** Enable Microsoft Authenticator for every account and give each staff member their own login, using Bitwarden (free) for passwords. *Time: about 1 day. Cost: free.*
+
+2. **Appoint an Information Officer and register them (FREE).** Choose the person responsible for POPIA compliance and register them at inforegulator.org.za. *Time: 1 to 2 hours. Cost: free.*
+
+3. **Write a breach response plan and data inventory (FREE).** Document who to call, how to contain a breach, and how to notify the Information Regulator and affected people. List every system, folder and device holding client data. *Time: 1 to 2 days. Cost: free.*
+
+4. **Move client data to encrypted cloud storage and set up backups (LOW COST).** Move files from USB drives to OneDrive or Azure Blob Storage, then turn on daily backups. Check whether your existing Microsoft 365 plan already covers these before paying for anything new. *Time: 2 to 3 days. Cost: may be included in your current subscription; otherwise, get a quote.*
+
+5. **Enable automatic updates and Find My Device, and run a phishing training session (FREE).** Turn on automatic updates and Find My Device on all devices, then hold a short phishing awareness session for your team using free resources from knowbe4.com. *Time: about 1 day. Cost: free.*
+
+## About SecureCheck SA
+
+"All security controls, risk scores and POPIA references in this report are sourced from the SecureCheck SA database powered by Progress OpenEdge. Claude AI explains and communicates the findings - it does not generate or modify them. SecureCheck SA was built for the 2 million South African small businesses that cannot afford a cybersecurity consultant."
